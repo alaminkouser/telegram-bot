@@ -1,4 +1,12 @@
-import { getMe } from "./methods/getMe/index.ts";
-import { PRIVATE } from "./private/index.ts";
+import { PRIVATE } from "./PRIVATE/index.ts";
 
-getMe();
+
+declare global {
+  const BASE: string;
+  interface Window {
+    BASE: string;
+  }
+}
+window.BASE = "https://api.telegram.org/bot" + PRIVATE.token + "/";
+
+
