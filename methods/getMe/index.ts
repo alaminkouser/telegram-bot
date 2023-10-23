@@ -24,6 +24,6 @@ export default async function getMe(): Promise<{
         ok: false,
       };
     }).finally(() => {
-      console.info("method: getMe");
+      // console.info("method: getMe");
     });
 }

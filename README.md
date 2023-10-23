@@ -5,8 +5,11 @@
 - PRIVATE/index.ts
 
 ```ts
-export const PRIVATE = {
-    "token": "",
+const PRIVATE = {
+    "token": string,
+    "owner": {
+        "id": number
+    }
 }
 ```
 

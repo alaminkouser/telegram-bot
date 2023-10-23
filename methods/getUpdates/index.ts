@@ -27,7 +27,7 @@ export default async function getUpdates({
         type: string;
       };
       date: number;
-      text: string;
+      text?: string;
     };
   }];
 }> {
@@ -54,6 +54,6 @@ export default async function getUpdates({
       ok: false,
     };
   }).finally(() => {
-    console.info("method: getUpdates");
+    // console.info("method: getUpdates");
   });
 }
