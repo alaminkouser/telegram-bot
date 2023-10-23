@@ -5,6 +5,8 @@ export default async function getUpdates({
   allowed_updates = [],
 }): Promise<{
   ok: boolean;
+  error_code?: number;
+  description?: string;
   result?: [{
     update_id: number;
     message: {
@@ -52,6 +54,6 @@ export default async function getUpdates({
       ok: false,
     };
   }).finally(() => {
-    console.info("method: getMe");
+    console.info("method: getUpdates");
   });
 }
